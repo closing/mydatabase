@@ -151,9 +151,10 @@ public class SimpleWrapper implements Wrapper, Pipeline {
 	public void setCluster(Cluster cluster) {
 	}
 	public String getName() {
-		return null;
+		return name;
 	}
 	public void setName(String name) {
+		this.name = name;
 	}
 	public ClassLoader getParentClassLoader() {
 		return null;
