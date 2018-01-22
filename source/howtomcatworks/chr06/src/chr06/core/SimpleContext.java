@@ -46,18 +46,18 @@ public class SimpleContext implements Context, Pipeline, Lifecycle {
 	
 	// Lifecyle
 	protected boolean started = false;
-	protected LifecycleSupport lifecycle = new LifecycleSurpport(this);
+	protected LifecycleSupport lifecycle = new LifecycleSupport(this);
 	
 	public void addLifecycleListener(LifecycleListener listener) {
 		this.lifecycle.addLifecycleListener(listener);
 	}
 	public void removeLifecycleListener(LifecycleListener listener) {
-		this.lfiecycle.removeLifecycleListener(listener);
+		this.lifecycle.removeLifecycleListener(listener);
 	}
-	public LifecyclListener[] findLifecycleListeners() {
+	public LifecycleListener[] findLifecycleListeners() {
 		return null;
 	}
-	public synchronized void start() throws LifecyleException {
+	public synchronized void start() throws LifecycleException {
 		if (started) {
 			throw new LifecycleException("SimpleContext has already started");
 		}
@@ -72,7 +72,7 @@ public class SimpleContext implements Context, Pipeline, Lifecycle {
 			
 			// start container
 			Container containers[] = findChildren();
-			for (int i=0; i<cotainers.length; i++) {
+			for (int i=0; i<containers.length; i++) {
 				if (containers[i] instanceof Lifecycle) {
 					((Lifecycle)containers[i]).start();
 				}
@@ -90,7 +90,7 @@ public class SimpleContext implements Context, Pipeline, Lifecycle {
 		}
 		lifecycle.fireLifecycleEvent(AFTER_START_EVENT, null);
 	}
-	public void stop() throws LifecyleException {
+	public void stop() throws LifecycleException {
 		if (!started) {
 			throw new LifecycleException("SimpleContext has not been started");
 		}
@@ -104,7 +104,7 @@ public class SimpleContext implements Context, Pipeline, Lifecycle {
 			}
 			// stop container
 			Container containers[] = findChildren();
-			for (int i=0; i<cotainers.length; i++) {
+			for (int i=0; i<containers.length; i++) {
 				if (containers[i] instanceof Lifecycle) {
 					((Lifecycle)containers[i]).stop();
 				}
