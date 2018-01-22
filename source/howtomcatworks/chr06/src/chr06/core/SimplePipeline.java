@@ -18,7 +18,6 @@ import org.apache.catalina.LifecycleListener;
 public class SimplePipeline implements Pipeline, Lifecycle {
 	// Lifecycle
 	public synchronized void start() throws LifecycleException {
-		System.out.println("Starting SimplePipeline");
 	}
 	public void stop() throws LifecycleException {
 	}
