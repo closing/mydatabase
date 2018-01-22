@@ -49,10 +49,10 @@ public class SimpleContext implements Context, Pipeline, Lifecycle {
 	protected LifecycleSupport lifecycle = new LifecycleSupport(this);
 	
 	public void addLifecycleListener(LifecycleListener listener) {
-		lifecycle.lifecycle.addLifecycleListener(listener);
+		lifecycle.addLifecycleListener(listener);
 	}
 	public void removeLifecycleListener(LifecycleListener listener) {
-		lifecycle.lifecycle.removeLifecycleListener(listener);
+		lifecycle.removeLifecycleListener(listener);
 	}
 	public LifecycleListener[] findLifecycleListeners() {
 		return null;
