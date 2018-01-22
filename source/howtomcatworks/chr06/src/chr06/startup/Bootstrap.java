@@ -52,6 +52,8 @@ public class Bootstrap {
 			((Lifecycle)connector).start();
 			((Lifecycle)context).start();
 			System.in.read();
+			((Lifecycle)context).stop();
+		
 		}
 		catch (Exception e) {
 			e.printStackTrace();
