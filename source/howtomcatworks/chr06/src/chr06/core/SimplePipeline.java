@@ -11,9 +11,26 @@ import org.apache.catalina.Valve;
 import org.apache.catalina.Contained;
 import org.apache.catalina.Container;
 import org.apache.catalina.ValveContext;
+import org.apache.catalina.Lifecycle;
+import org.apache.catalina.LifecycleException;
+import org.apache.catalina.LifecycleListener;
 
-public class SimplePipeline implements Pipeline{
+public class SimplePipeline implements Pipeline, Lifecycle {
+	// Lifecycle
+	public synchronized void start() throws LifecycleException {
+		System.out.println("Starting SimplePipeline");
+	}
+	public void stop() throws LifecycleException {
+	}
+	public void addLifecycleListener(LifecycleListener listener) {
+	}
+	public void removeLifecycleListener(LifecycleListener listener) {
+	}
+	public LifecycleListener[] findLifecycleListeners() {
+		return null;
+	}
 	
+	// Pipeline
 	public SimplePipeline(Container container) {
 		setContainer(container);
 	}
