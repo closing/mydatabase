@@ -49,10 +49,10 @@ public class SimpleContext implements Context, Pipeline, Lifecycle {
 	protected LifecycleSupport lifecycle = new LifecycleSupport(this);
 	
 	public void addLifecycleListener(LifecycleListener listener) {
-		this.lifecycle.addLifecycleListener(listener);
+		lifecycle.lifecycle.addLifecycleListener(listener);
 	}
 	public void removeLifecycleListener(LifecycleListener listener) {
-		this.lifecycle.removeLifecycleListener(listener);
+		lifecycle.lifecycle.removeLifecycleListener(listener);
 	}
 	public LifecycleListener[] findLifecycleListeners() {
 		return null;
@@ -71,10 +71,10 @@ public class SimpleContext implements Context, Pipeline, Lifecycle {
 			}
 			
 			// start container
-			Container containers[] = findChildren();
-			for (int i=0; i<containers.length; i++) {
-				if (containers[i] instanceof Lifecycle) {
-					((Lifecycle)containers[i]).start();
+			Container children[] = findChildren();
+			for (int i=0; i<children.length; i++) {
+				if (children[i] instanceof Lifecycle) {
+					((Lifecycle)children[i]).start();
 				}
 			}
 			
@@ -103,10 +103,10 @@ public class SimpleContext implements Context, Pipeline, Lifecycle {
 				((Lifecycle)pipeline).stop();
 			}
 			// stop container
-			Container containers[] = findChildren();
-			for (int i=0; i<containers.length; i++) {
-				if (containers[i] instanceof Lifecycle) {
-					((Lifecycle)containers[i]).stop();
+			Container children[] = findChildren();
+			for (int i=0; i<children.length; i++) {
+				if (children[i] instanceof Lifecycle) {
+					((Lifecycle)children[i]).stop();
 				}
 			}
 			
