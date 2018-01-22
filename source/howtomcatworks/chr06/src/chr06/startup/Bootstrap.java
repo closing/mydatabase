@@ -5,6 +5,7 @@ import chr06.core.SimpleContext;
 import chr06.core.SimpleContextMapper;
 import chr06.core.SimpleWrapper;
 import chr06.core.SimpleLoader;
+import chr06.core.SimpleContextLifecycleListener;
 
 import org.apache.catalina.Valve;
 import org.apache.catalina.Connector;
@@ -13,12 +14,14 @@ import org.apache.catalina.Context;
 import org.apache.catalina.Loader;
 import org.apache.catalina.Pipeline;
 import org.apache.catalina.Wrapper;
+import org.apache.catalina.Lifecycle;
+import org.apache.catalina.LifecycleListener;
 import org.apache.catalina.connector.http.HttpConnector;
 
 
 public class Bootstrap {
 	public static void main(String args[]) {
-		HttpConnector connector = new HttpConnector();
+		Connector connector = new HttpConnector();
 		Wrapper wrapper1 = new SimpleWrapper();
 		wrapper1.setName("Primitive");
 		wrapper1.setServletClass("PrimitiveServlet");
@@ -32,6 +35,8 @@ public class Bootstrap {
 		
 		Mapper mapper = new SimpleContextMapper();
 		mapper.setProtocol("http");
+		LifecycleListener listener  = new SimpleContextLifecycleListener();
+		((Lifecycle)context).addLifecycleListener(listener);
 		context.addMapper(mapper);
 		
 		Loader loader = new SimpleLoader();
@@ -44,7 +49,8 @@ public class Bootstrap {
 		
 		try {
 			connector.initialize();
-			connector.start();
+			((Lifecycle)connector).start();
+			((Lifecycle)context).start();
 			System.in.read();
 		}
 		catch (Exception e) {
