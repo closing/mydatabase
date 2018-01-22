@@ -1,1 +1,17 @@
-
+<project name="helloapp" default="compile" basedir=".">
+  <property name="tomcat.home" value="/usr/java/apache-tomcat-8.5.24" />
+  <property name="app.home" value="." />
+  <property name="src.home" value="${app.home}/src" />
+  <property name="classes.home" value="${app.home}/WEB-INF/classes" />
+  <path id="compile.classpath">
+    <pathelement location="${classes.home}" />
+    <fileset dir="${tomcat.home}/lib">
+      <include name="*.jar" />
+    </fileset>
+  </path>
+  <target name="compile">
+    <javac srcdir="${src.home}" destdir="${classes.home}" debug="yes">
+      <classpath refid="compile.classpath" />
+    </javac>
+  </target>
+</project>
