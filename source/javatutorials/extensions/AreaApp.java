@@ -6,6 +6,6 @@ public class AreaApp {
     int height = 5;
     
     Rectangle r = new Rectangle(width, height);
-    System.out.println("The rectangle's area is " + RectangleArea.area(r););
+    System.out.println("The rectangle's area is " + RectangleArea.area(r));
   }
 }
