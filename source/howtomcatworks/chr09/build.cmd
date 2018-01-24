@@ -1,0 +1,1 @@
+javac @sources.txt -sourcepath src -d classes -cp "classes;lib\servlet.jar;lib\catalina.jar;lib\naming-resources.jar;lib\bootstrap.jar;lib\naming-common.jar;lib\commons-collections.jar" -Xlint:deprecation -Xlint:unchecked
