@@ -1,0 +1,1 @@
+java -cp "classes;lib\tomcat-util.jar;lib\servlet.jar;lib\catalina.jar;lib\naming-resources.jar;lib\bootstrap.jar;lib\naming-common.jar;lib\commons-collections.jar;lib\commons-digester.jar" chr14.startup.Stopper
