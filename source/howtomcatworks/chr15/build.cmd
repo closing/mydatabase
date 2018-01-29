@@ -1,0 +1,1 @@
+javac @sources.txt -sourcepath src -d classes -cp "classes;lib\servlet.jar;lib\servlet.jar;lib\catalina.jar;lib\naming-common.jar;lib\commons-collections.jar;lib\naming-resources.jar;lib\commons-digester.jar;lib\commons-beanutils.jar;lib\tomcat-util.jar;lib\bootstrap.jar;lib\commons-logging.jar;lib\commons-beanutils.jar" -Xlint:unchecked
