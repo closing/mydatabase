@@ -1,0 +1,1 @@
+java -cp "classes;lib\tomcat-util.jar;lib\servlet.jar;lib\bootstrap.jar;lib\servlet.jar;lib\naming-common.jar;lib\naming-resources.jar;lib\commons-digester.jar;lib\catalina.jar;lib\commons-collections.jar;lib\commons-beanutils.jar;lib\commons-logging.jar;lib\commons-beanutils.jar" chr15.startup.Bootstrap
