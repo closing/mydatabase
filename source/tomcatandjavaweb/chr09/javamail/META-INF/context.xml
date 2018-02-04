@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable="true">
+    <!-- FileStore -->
+    <!--
+    <Manager className="org.apache.catalina.session.PersistentManager" saveOnRestart="true"
+             maxActiveSession="10" minIdleSwap="60" maxIdleSwap="120" maxIdleBackup="180"
+             maxInactiveInterval="300">
+        <Store className="org.apache.catalina.session.FileStore" directory="mydir" />
+    </Manager>
+    -->
+    <Manager className="org.apache.catalina.session.PersistentManager" saveOnRestart="true"
+             maxActiveSession="10" minIdleSwap="60" maxIdleSwap="120" maxIdleBackup="180"
+             maxInactiveInterval="300">
+        <Store className="org.apache.catalina.session.JDBCStore" 
+               driverName="com.mysql.jdbc.Driver"
+               connectionURL="jdbc:mysql://localhost:3306/tomcatsessionDB"
+               connectionName="dbuser"
+               connectionPassword="1234"
+               sessionTable="tomcat_sessions"
+               sessionIdCol="session_id"
+               sessionDataCol="session_data"
+               sessionValidCol="valid_session"
+               sessionMaxInactiveCol="max_inactive"
+               sessionLastAccessedCol="last_access"
+               sessionAppCol="app_name"
+               checkInterval="60" />
+    </Manager>
+</Context> 
