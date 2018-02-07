@@ -11,8 +11,11 @@ Eample1
 		<c:when test="${clock.hours < 12}">
 			<h1>Good morning!</h1>
 		</c:when>
-		<c:otherwise>
+		<c:when test="${clock.hours < 18}">
 			<h1>Good day!</h1>
+		</c:when>
+		<c:otherwise>
+			<h1>Good evening!</h1>
 		</c:otherwise>
 	</c:choose>
 	Welcome to our site, open 24 hours a day.
