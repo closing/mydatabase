@@ -3,7 +3,7 @@
 <%@ page import="mypack.ShoppingCart" %>
 <%@ page import="mypack.ShoppingCartItem" %>
 
-<jsp:userBean id="bookDB" scope="application" class="mypack.BookDB" />
+<jsp:useBean id="bookDB" scope="application" class="mypack.BookDB" />
 
 <%!
   public String convert(String s) {
