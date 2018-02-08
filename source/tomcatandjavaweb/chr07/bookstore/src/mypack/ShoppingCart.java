@@ -40,7 +40,7 @@ public class ShoppingCart {
 	protected void finalize() throws Throwable {
 		items.clear();
 	}
-	public synchronized int getNumberOfItem() {
+	public synchronized int getNumberOfItems() {
 		return this.numberOfItems;
 	}
 	public synchronized double getTotal() {
