@@ -1,10 +1,13 @@
-import org.apache.tools.ant.Task;
+import org.apache.tools.ant.Project;
+public class HelloWorld {
+	private Project project;
 	
-public class HelloWorld extends Task {// VERSION 1.1
+	public void setProject(Project project) {
+	this.project = project;
+	}
 	public void execute() {
 		String message = project.getProperty("ant.project.name");
-		log("Here is project '" + message +"'");
-		log("I am used in:" + getLocation());
+		project.log("Here is project '" + message + "'", Project.MSG_INFO);
 		System.out.println("Hello World!");
 	}
 }
