@@ -10,7 +10,7 @@
   </description>
   <tlib-version>3.0</tlib-version>
   <short-name>chr07</short-name>
-  <uri>chr07.mytaglib</uri>
+  <uri>chr07.taglib</uri>
 
   <tag>
     <description>
