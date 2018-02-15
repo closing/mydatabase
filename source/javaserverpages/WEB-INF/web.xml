@@ -10,5 +10,17 @@
   <description>
     The examples of the book of JavaServer Pages.
   </description>
+  <context-param>
+    <param-name>javax.servlet.jsp.jstl.sql.maxRows</param-name>
+    <param-value>10</param-value>
+  </context-param>
+  <context-param>
+    <param-name>
+      javax.servlet.jsp.jstl.sql.dataSource
+    </param-name>
+    <param-value>
+      jdbc:postgresql://localhost:5432/postgres?currentSchema=jspdb,org.postgresql.Driver,postgres,admin
+    </param-value>
+  </context-param>
 
 </web-app>
