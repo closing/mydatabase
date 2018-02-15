@@ -37,4 +37,29 @@
       <rtexprvalue>true</rtexprvalue>
     </attribute>
   </tag>
+  <tag>
+    <description>
+      Evaluates its body if the specified value is in the format of
+      a valid SMTP email address, and optionally saves the result
+      of the validation as a Boolean in a variable specified by the
+      var and scope attributes.
+    </description>
+    <name>ifValidEmailAddr</name>
+    <tag-class>common.tags.IfValidEmailAddrTag</tag-class>
+    <body-content>JSP</body-content>
+
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>var</name>
+      <required>false</required>
+    </attribute>
+    <attribute>
+      <name>scope</name>
+      <required>false</required>
+    </attribute>
+  </tag>
 </taglib>
