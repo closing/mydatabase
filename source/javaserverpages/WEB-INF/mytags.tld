@@ -1,27 +1,65 @@
-<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
-    http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
-  version="2.0">
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib 
+  xmlns="http://java.sun.com/xml/ns/j2ee" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+    http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd" version="2.0">
+  <description>
+    A custom tag library for the examples.
+  </description>
+  <tlib-version>3.0</tlib-version>
+  <short-name>cm</short-name>
+  <uri>common.taglibs</uri>
+  <tag>
+    <description>
+       Writes the specified debug info to the response, System.out or
+       the application log file based on the value of the debug
+       request parameter
+    </description>
+    <name>debug</name>
+    <tag-class>common.tags.DebugTag</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>type</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <description>
+       Writes its body content to the specified file
+    </description>
+    <name>fileWrite</name>
+    <tag-class>common.tags.FileWriteTag</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>fileName</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <description>
+      Evaluates its body if the specified value is in the format of
+      a valid SMTP email address, and optionally saves the result
+      of the validation as a Boolean in a variable specified by the
+      var and scope attributes.
+    </description>
+    <name>ifValidEmailAddr</name>
+    <tag-class>common.tags.IfValidEmailAddrTag</tag-class>
+    <body-content>JSP</body-content>
 
-  <tlib-version>1.0</tlib-version>
-  <jsp-version>2.0</jsp-version>
-  <short-name>mytags</short-name>
-  <uri>mytaglib</uri>
-
-  <tag-file>
-    <name>copyright</name>
-    <path>/WEB-INF/tags/mytags/chr11/copyright.tag</path>
-  </tag-file>
-
-  <tag-file>
-    <name>forEvenAndOdd</name>
-    <path>/WEB-INF/tags/mytags/chr11/forEvenAndOdd.tag</path>
-  </tag-file>
-
-  <tag-file>
-    <name>htmlFormat</name>
-    <path>/WEB-INF/tags/mytags/chr11/htmlFormat.tag</path>
-  </tag-file>
-
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>var</name>
+      <required>false</required>
+    </attribute>
+    <attribute>
+      <name>scope</name>
+      <required>false</required>
+    </attribute>
+  </tag>
 </taglib>
