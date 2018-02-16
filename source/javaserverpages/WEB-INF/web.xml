@@ -19,7 +19,30 @@
     <param-value> jdbc:postgresql://localhost:5432/postgres?currentSchema=jspdb,org.postgresql.Driver,postgres,admin
     </param-value>
   </context-param>
-
+  <context-param>
+    <param-name>
+      javax.servlet.jsp.jstl.fmt.locale
+    </param-name>
+    <param-value>
+      en-US
+    </param-value>
+  </context-param>
+  <context-param>
+    <param-name>
+      javax.servlet.jsp.jstl.fmt.fallbackLocale
+    </param-name>
+    <param-value>
+      en
+    </param-value>
+  </context-param>
+  <context-param>
+    <param-name>
+      javax.servlet.jsp.jstl.fmt.localizationContext
+    </param-name>
+    <param-value>
+      labels
+    </param-value>
+  </context-param>
   <!-- Security constraints for examples in Chapter 13 -->
   <security-constraint>
     <web-resource-collection>
@@ -46,11 +69,7 @@
     <realm-name>ORA Examples</realm-name>
     <!-- FORM Authortication -->
     <!--
-    <auth-method>FORM</auth-method>
-    <form-login-config>
-      <form-login-page>/login/login.html</form-login-page>
-      <form-error-page>/login/error.html</form-error-page>
-    </form-login-config>
+    <auth-method>FORM</auth-method><form-login-config><form-login-page>/login/login.html</form-login-page><form-error-page>/login/error.html</form-error-page></form-login-config>
     -->
   </login-config>
   <security-role>
