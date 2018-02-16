@@ -1,230 +1,366 @@
 <html>
-  <head>
-    <title>JSP book examples</title>
-  </head>
-  <body bgcolor="white">
-    <h1>Welcome to JavaServer Pages, 3rd Edition</h1>
-    <table width="80%" cellpadding="10">
-      <tr>
-        <td><img src="cover.gif" border="1"></td>
-        <td>
-          Here are all examples described in the book. I hope you
-          will have fun reading the book and that you'll find the examples
-          useful.<br><br>
-          <i>Hans Bergsten</i>
-        </td>
-      </tr>
-    </table>
+<head>
+  <title>JSP book examples</title>
+</head>
+<body bgcolor="white">
+  <h1>Welcome to JavaServer Pages, 3rd Edition</h1>
+  <table width="80%" cellpadding="10">
+    <tr>
+      <td>
+        <img src="cover.gif" border="1">
+      </td>
+      <td>
+        Here are all examples described in the book. I hope you will have fun reading the book and that you'll find the examples
+        useful.
+        <br>
+        <br>
+        <i>Hans Bergsten</i>
+      </td>
+    </tr>
+  </table>
 
-    <table border="0" cellspacing="10">
-      <tr>
-         <td colspan="2"><h2>Chapter 1</h2></td>
-      </tr>
-      <tr>
-        <td><a href="chr01/example1.jsp">Example1</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><h2>Chapter 5</h2></td>
-      </tr>
-      <tr>
-        <td><a href="chr05/easy.jsp">JSP is Easy</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><h2>Chapter 6</h2></td>
-      </tr>
-      <tr>
-        <td><a href="chr06/cartoon.jsp">Cartoon Bean</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr06/cartoon2.jsp">Cartoon Bean with JSTL</a></td>
-        <td></td>
-      </tr>
-       <tr>
-        <td><a href="chr06/message.jsp">Message Bean</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>
-          <h2>Chapter 7</h2>
-        </td>
-      </tr>
-      <tr>
-        <td><a href="chr07/message.jsp">Message Custom Action</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>
-          <h2>Chapter 8</h2>
-        </td>
-      </tr>
-      <tr>
-        <td><a href="chr08/input_jstl.jsp">JSTL Parameter Access</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr08/reqinfo.jsp">JSTL Request Data Access</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr08/input_bean.jsp">Bean Parameter Access</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr08/validate_jstl.jsp">JSTL Validation</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr08/validate_bean.jsp">Bean Validation</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><h2>Chapter 9</h2></td>
-      </tr>
-      <tr>
-        <td><a href="chr09/error1.jsp">Improperly Terminated Directive</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr09/error2.jsp">Improperly Terminated Action</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr09/error3.jsp">Invalid Attribute Name</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr09/error4.jsp">Missing End Quote</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr09/error5.jsp">Missing EL Curly Braces</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr09/error6.jsp">Missing End EL Curly Brace</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr09/error7.jsp">Invalid Property Name</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr09/error8.jsp">Invalid Parameter Name</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr09/error9.jsp">Logical Error</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr09/debug.jsp?debug=resp+stdout&a=b">Debug Output</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr09/calc.jsp">Runtime Exception and Error Page</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr09/calc2.jsp">Runtime Exception and Catch</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><h2>Chapter 10</h2></td>
-      </tr>
-      <tr>
-        <td><a href="chr10/userinfoinput.jsp">Separate Validation Page</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr10/counter1.jsp">Session and Application Scope Counters</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr10/counter2.jsp">URL Rewriting</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr10/catalog.jsp">Shopping Cart</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><h2>Chapter 11</h2></td>
-      </tr>
-      <tr>
-        <td><a href="chr11/copyright.jsp">A Minimal Tag File</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr11/message.jsp">A Tag File Using Attributes</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr11/headers.jsp">A Tag File Using Undeclared Attributes</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr11/forum.jsp">A Tag File Processing Body Content</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr11/even_and_odd.jsp">A Tag File Processing Fragment Attributes</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr11/even_and_odd2.jsp">A Tag File Exposing a Variable</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr11/even_and_odd3.jsp">A Tag File Exposing a Variable With Any Name</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>
-          <h2>Chapter 12</h2>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <font color="red">All these examples require a database</font>
-        </td>
-      </tr>
-      <tr>
-        <td><a href="chr12/enter.jsp">Employee Registration</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr12/search.html">Employee Search</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr12/maxrows.jsp">Getting a Few Rows at a Time</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr12/foreach.jsp">Displaying a Few Rows at a Time</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td valign="top"><h2>Chapter 13</h2></td>
-      </tr>
-      <tr>
-        <td colspan="2"><font color="red">All these examples require a database</font></td>
-      </tr>
-      <tr>
-        <td><a href="chr13/admin/enter.jsp">Container-Provided Security, Employee Registration</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr13/search/search.html">Container-Provided Security, Employee Search</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="chr13/login.jsp">Application-Controlled Security, Project Billboard</a></td>
-        <td></td>
-      </tr>
-    </table>
-  </body>
+  <table border="0" cellspacing="10">
+    <tr>
+      <td colspan="2">
+        <h2>Chapter 1</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr01/example1.jsp">Example1</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <h2>Chapter 5</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr05/easy.jsp">JSP is Easy</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <h2>Chapter 6</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr06/cartoon.jsp">Cartoon Bean</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr06/cartoon2.jsp">Cartoon Bean with JSTL</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr06/message.jsp">Message Bean</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <h2>Chapter 7</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr07/message.jsp">Message Custom Action</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <h2>Chapter 8</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr08/input_jstl.jsp">JSTL Parameter Access</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr08/reqinfo.jsp">JSTL Request Data Access</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr08/input_bean.jsp">Bean Parameter Access</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr08/validate_jstl.jsp">JSTL Validation</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr08/validate_bean.jsp">Bean Validation</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <h2>Chapter 9</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr09/error1.jsp">Improperly Terminated Directive</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr09/error2.jsp">Improperly Terminated Action</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr09/error3.jsp">Invalid Attribute Name</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr09/error4.jsp">Missing End Quote</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr09/error5.jsp">Missing EL Curly Braces</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr09/error6.jsp">Missing End EL Curly Brace</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr09/error7.jsp">Invalid Property Name</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr09/error8.jsp">Invalid Parameter Name</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr09/error9.jsp">Logical Error</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr09/debug.jsp?debug=resp+stdout&a=b">Debug Output</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr09/calc.jsp">Runtime Exception and Error Page</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr09/calc2.jsp">Runtime Exception and Catch</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <h2>Chapter 10</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr10/userinfoinput.jsp">Separate Validation Page</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr10/counter1.jsp">Session and Application Scope Counters</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr10/counter2.jsp">URL Rewriting</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr10/catalog.jsp">Shopping Cart</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <h2>Chapter 11</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr11/copyright.jsp">A Minimal Tag File</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr11/message.jsp">A Tag File Using Attributes</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr11/headers.jsp">A Tag File Using Undeclared Attributes</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr11/forum.jsp">A Tag File Processing Body Content</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr11/even_and_odd.jsp">A Tag File Processing Fragment Attributes</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr11/even_and_odd2.jsp">A Tag File Exposing a Variable</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr11/even_and_odd3.jsp">A Tag File Exposing a Variable With Any Name</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <h2>Chapter 12</h2>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <font color="red">All these examples require a database</font>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr12/enter.jsp">Employee Registration</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr12/search.html">Employee Search</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr12/maxrows.jsp">Getting a Few Rows at a Time</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr12/foreach.jsp">Displaying a Few Rows at a Time</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <h2>Chapter 13</h2>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <font color="red">All these examples require a database</font>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr13/admin/enter.jsp">Container-Provided Security, Employee Registration</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr13/search/search.html">Container-Provided Security, Employee Search</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr13/login.jsp">Application-Controlled Security, Project Billboard</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <h2>Chapter 14</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr14/poll.jsp">Localized Poll Application</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr14/japanese.jsp">Japanese Hello World</a>
+        <br>
+        <font color="red">This example requires a browser with Japanese font
+        </font>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr14/input.jsp">Localized Input for Western Languages</a>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="chr14/input_nw.jsp">Localized Input for Non-Western Languages</a>
+        <br>
+        <font color="red">This example requires a browser with Japanese, Greek and Russian fonts</font>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+
 </html>
