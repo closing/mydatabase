@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
-                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-  version="3.1"
-  metadata-complete="true">
-
+<web-app 
+  xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1" metadata-complete="true">
   <display-name>JavaServer Pages Example</display-name>
   <description>
     The examples of the book of JavaServer Pages.
   </description>
+  <!-- context param -->
   <context-param>
     <param-name>javax.servlet.jsp.jstl.sql.maxRows</param-name>
     <param-value>10</param-value>
@@ -18,9 +16,47 @@
     <param-name>
       javax.servlet.jsp.jstl.sql.dataSource
     </param-name>
-    <param-value>
-      jdbc:postgresql://localhost:5432/postgres?currentSchema=jspdb,org.postgresql.Driver,postgres,admin
+    <param-value> jdbc:postgresql://localhost:5432/postgres?currentSchema=jspdb,org.postgresql.Driver,postgres,admin
     </param-value>
   </context-param>
 
+  <!-- Security constraints for examples in Chapter 13 -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>admin</web-resource-name>
+      <url-pattern>/chr13/admin/*</url-pattern>
+      <url-pattern>/chr13/search/delete.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>search</web-resource-name>
+      <url-pattern>/chr13/search/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+      <role-name>user</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <login-config>
+    <auth-method>BASIC</auth-method>
+    <realm-name>ORA Examples</realm-name>
+    <!-- FORM Authortication -->
+    <!--
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/login/login.html</form-login-page>
+      <form-error-page>/login/error.html</form-error-page>
+    </form-login-config>
+    -->
+  </login-config>
+  <security-role>
+    <role-name>admin</role-name>
+  </security-role>
+  <security-role>
+    <role-name>user</role-name>
+  </security-role>
 </web-app>
