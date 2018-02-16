@@ -47,7 +47,6 @@
     <name>ifValidEmailAddr</name>
     <tag-class>common.tags.IfValidEmailAddrTag</tag-class>
     <body-content>JSP</body-content>
-
     <attribute>
       <name>value</name>
       <required>true</required>
@@ -61,5 +60,60 @@
       <name>scope</name>
       <required>false</required>
     </attribute>
+  </tag>
+  <tag>
+    <description>
+      Evaluates its body if the current, authenticated, user belongs to
+      the specified security role, and optionally saves the result
+      of the test as a Boolean in a variable specified by the var and       scope attributes.
+    </description>
+    <name>ifUserInRole</name>
+    <tag-class>common.tags.IfUserInRoleTag</tag-class>
+    <body-content>JSP</body-content>
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>var</name>
+      <required>false</required>
+    </attribute>
+    <attribute>
+      <name>scope</name>
+      <required>false</required>
+    </attribute>
+  </tag>
+  <tag>
+    <description>
+	Adds a cookie to the response.
+    </description>
+    <name>addCookie</name>
+    <tag-class>common.tags.AddCookieTag</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>maxAge</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <description>
+      Invalidates the session, causing all session scope variables to
+      be removed and the session to be terminated (marked as invalid).
+    </description>
+    <name>invalidateSession</name>
+    <tag-class>common.tags.InvalidateSessionTag</tag-class>
+    <body-content>empty</body-content>
   </tag>
 </taglib>
