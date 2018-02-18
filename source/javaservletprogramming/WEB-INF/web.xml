@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1"
+  metadata-complete="true">
+
+  <display-name>Example</display-name>
+  <description>    The examples of Java Servlet Programming 2rd!  </description>
+  <!-- Chapter2 -->
+  <servlet>
+    <servlet-name>HelloWorld</servlet-name>
+    <servlet-class>chr02.HelloWorld</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>hello</servlet-name>
+    <servlet-class>chr02.HelloServlet</servlet-class>
+  </servlet>
+  <!-- Chapter 3-->
+  <servlet>
+    <servlet-name>simple</servlet-name>
+    <servlet-class>chr03.SimpleCounterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>holistic1</servlet-name>
+    <servlet-class>chr03.HolisticCounterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>holistic2</servlet-name>
+    <servlet-class>chr03.HolisticCounterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>init</servlet-name>
+    <servlet-class>chr03.InitCounterServlet</servlet-class>
+    <init-param>
+      <param-name>initial</param-name>
+      <param-value>1000</param-value>
+      <description>
+        The initial value for the couter
+      </description>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>initdestroy</servlet-name>
+    <servlet-class>chr03.InitDestroyCounterServlet</servlet-class>
+    <init-param>
+      <param-name>initial</param-name>
+      <param-value>1000</param-value>
+      <description>Option</description>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>prime</servlet-name>
+    <servlet-class>chr03.PrimeSearcherServlet</servlet-class>
+    <load-on-startup>10</load-on-startup>
+  </servlet>
+    <!-- Chapter2 -->
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/HelloWorld</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <!--Chapter3-->
+  <servlet-mapping>
+    <servlet-name>simple</servlet-name>
+    <url-pattern>/simple</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>holistic1</servlet-name>
+    <url-pattern>/holistic1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>holistic2</servlet-name>
+    <url-pattern>/holistic2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>init</servlet-name>
+    <url-pattern>/init</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>initdestroy</servlet-name>
+    <url-pattern>/initdestroy</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>prime</servlet-name>
+    <url-pattern>/prime</url-pattern>
+  </servlet-mapping>
+</web-app>
