@@ -2,9 +2,9 @@ package common.tags;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.tagext.JspTagException;
+import javax.servlet.jsp.JspTagException;
+import javax.servlet.jsp.tagext.SimpleTagSupport;
 import javax.servlet.jsp.JspException;
-import org.apache.taglibs.standard.lang.support.SimpleTagSupport*;
 
 public class SetHeaderTag extends SimpleTagSupport {
     private String name;
