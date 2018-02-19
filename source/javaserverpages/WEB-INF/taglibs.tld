@@ -135,4 +135,20 @@
       <rtexprvalue>true</rtexprvalue>
     </attribute>
   </tag>
+  <tag>
+    <description>
+	      Inserts HTML in the body, as an HTML reference if "page" is not
+        the current page, otherwise as is.
+    </description>
+    <name>menuItem</name>
+    <tag-class>common.tags.MenuItemTag</tag-class>
+    <body-content>scriptless</body-content>
+
+    <attribute>
+      <name>page</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
 </taglib>
