@@ -150,5 +150,12 @@
       <rtexprvalue>true</rtexprvalue>
     </attribute>
   </tag>
-
+  <tag>
+    <description>
+      Sets response headers to prevent caching.
+    </description>
+    <name>noCache</name>
+    <tag-class>common.tags.NoCacheTag</tag-class>
+    <body-content>empty</body-content>
+  </tag>
 </taglib>
