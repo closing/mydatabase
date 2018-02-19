@@ -116,4 +116,23 @@
     <tag-class>common.tags.InvalidateSessionTag</tag-class>
     <body-content>empty</body-content>
   </tag>
+  <tag>
+    <description>
+      Set the specified response header to the specified value.
+    </description>
+    <name>setHeader</name>
+    <tag-class>common.tags.SetHeaderTag</tag-class>
+    <body-content>empty</body-content>
+
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
 </taglib>
