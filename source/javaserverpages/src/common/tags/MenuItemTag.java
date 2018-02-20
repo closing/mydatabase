@@ -10,7 +10,7 @@ import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspTagException;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
-import util.StringFormat;
+import common.util.StringFormat;
 
 public class MenuItemTag extends SimpleTagSupport {
     private String page;
