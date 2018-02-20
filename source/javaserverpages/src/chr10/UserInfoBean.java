@@ -1,6 +1,6 @@
 package chr10;
 
-import util.StringFormat;
+import common.util.StringFormat;
 import java.io.Serializable;
 
 public class UserInfoBean implements Serializable {
