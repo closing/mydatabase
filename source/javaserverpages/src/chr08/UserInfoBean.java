@@ -1,7 +1,7 @@
 package chr08;
 
 import java.io.Serializable;
-import util.StringFormat;
+import common.util.StringFormat;
 
 public class UserInfoBean implements Serializable {
   private static final long serialVersionUID = -1L;
