@@ -78,4 +78,42 @@
   <security-role>
     <role-name>user</role-name>
   </security-role>
+  <!-- Chapter 19 START -->
+  <servlet>
+    <servlet-name>hello</servlet-name>
+    <servlet-class>chr19.HelloWorldServlet</servlet-class>
+    <init-param>
+      <param-name>greeting</param-name>
+      <param-value>Hello,TOM!</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>helloworld</servlet-name>
+    <servlet-class>chr19.HelloWorldServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>helloworld</servlet-name>
+    <url-pattern>/helloworld</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>helloyou</servlet-name>
+    <servlet-class>chr19.HelloYouServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>helloyou</servlet-name>
+    <url-pattern>/helloyou</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>hellomime</servlet-name>
+    <servlet-class>chr19.HelloMIMEServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>hellomime</servlet-name>
+    <url-pattern>/hellomime</url-pattern>
+  </servlet-mapping>
+  <!-- Chapter 19 END -->
 </web-app>
