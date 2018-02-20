@@ -5,7 +5,7 @@ import javax.servlet.jsp.JspTagException;
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.JspException;
 import javax.servlet.http.HttpServletResponse;
-import util.CookieUtils;
+import common.util.CookieUtils;
 
 public class AddCookieTag extends SimpleTagSupport {
   private String name;
