@@ -3,7 +3,7 @@ package common.tags;
 import javax.servlet.jsp.JspTagException;
 import javax.servlet.jsp.jstl.core.ConditionalTagSupport;
 
-import util.StringFormat;
+import common.util.StringFormat;
 
 public class IfValidEmailAddrTag extends ConditionalTagSupport {
   private String value;
