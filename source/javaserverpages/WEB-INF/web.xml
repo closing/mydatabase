@@ -115,5 +115,59 @@
     <servlet-name>hellomime</servlet-name>
     <url-pattern>/hellomime</url-pattern>
   </servlet-mapping>
+  <!-- Billboard -->
+  <listener>
+    <listener-class>chr19.listeners.SessionCounterListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>chr19.listeners.ResourceManagerListener</listener-class>
+  </listener>  
+  <context-param>
+    <param-name>driverClass</param-name>
+    <param-value>
+      com.mysql.jdbc.Driver
+    </param-value>
+  </context-param>
+  <context-param>
+    <param-name>jdbcURL</param-name>
+    <param-value>jdbc:mysql://localhost:3306/BookDB</param-value>
+  </context-param>
+  <context-param>
+    <param-name>jdbcUser</param-name>
+    <param-value>dbuser</param-value>
+  </context-param>
+  <context-param>
+    <param-name>jdbcPassword</param-name>
+    <param-value>1234</param-value>
+  </context-param>
+  <!-- filters -->
+  <filter>
+    <filter-name>accessControl</filter-name>
+    <filter-class>
+      chr19.filters.AccessControlFilter
+    </filter-class>
+    <init-param>
+      <param-name>loginPage</param-name>
+      <param-value>/chr19/login.jsp</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>accessControl</filter-name>
+    <url-pattern>/chr19/protected/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <!-- 
+  <error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/chr09/errorpage.jsp</location>
+  </error-page>
+  -->
   <!-- Chapter 19 END -->
 </web-app>

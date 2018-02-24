@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.0//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_0.dtd">
+
+<struts-config>
+    <global-forwards>
+        <forward name="login" path="/chr19/login.jsp" redirect="true" />
+        <forward name="main" path="/chr19/protected/main.jsp" redirect="true" />
+    </global-forwards>
+    <action-mappings>
+        <action path="/chr19/authenticate" 
+                type="chr19.servlets.AuthenticateAction" />
+        <action path="/chr19/logout"
+                type="chr19.servlets.LogoutAction" />
+        <action path="/chr19/protected/storeMsg"
+                type="chr19.servlets.StoreMsgAction" />
+        <action path="/chr19/protected/updateProfile"
+                type="chr19.servlets.UpdateProfileAction" />
+    </action-mappings>
+</struts-config>
