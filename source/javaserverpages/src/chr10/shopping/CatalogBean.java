@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class CatalogBean implements Serializable {
+  private static final long serialVersionUID = -1L;
   private Map catalog = new HashMap();
 
   public CatalogBean() {
