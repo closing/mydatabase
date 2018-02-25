@@ -3,6 +3,7 @@ package chr10.shopping;
 import java.io.Serializable;
 
 public class ProductBean implements Serializable {
+  private static final long serialVersionUID = -1L;
   private String id;
   private String name;
   private String descr;
