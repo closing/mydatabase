@@ -43,6 +43,17 @@
       labels
     </param-value>
   </context-param>
+  <!-- Commom setting Start -->
+  <servlet>
+    <servlet-name>jspSource</servlet-name>
+    <servlet-class>common.servlet.JSPSourceServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>jspSource</servlet-name>
+    <url-pattern>/jspSource/*</url-pattern>
+  </servlet-mapping>
+  <!-- Common setting end -->
   <!-- Security constraints for examples in Chapter 13 -->
   <security-constraint>
     <web-resource-collection>
