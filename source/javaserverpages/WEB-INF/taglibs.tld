@@ -158,4 +158,77 @@
     <tag-class>common.tags.NoCacheTag</tag-class>
     <body-content>empty</body-content>
   </tag>
+  <tag>
+    <description>
+      Evaluates its body if the current, authenticated, user belongs to
+      the specified security role, and optionally saves the result
+      of the test as a Boolean in a variable specified by the var and 
+      scope attributes.
+    </description>
+    <name>ifUserInRole</name>
+    <tag-class>chr23.IfUserInRoleTag</tag-class>
+    <body-content>JSP</body-content>
+
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>var</name>
+      <required>false</required>
+    </attribute>
+    <attribute>
+      <name>scope</name>
+      <required>false</required>
+    </attribute>
+  </tag>
+
+  <tag>
+    <description>
+       Loops through a Map with option texts and values and exposes
+       a bean with "text", "value" and "selected" properties.
+    </description>
+    <name>forEachOption</name>
+    <tag-class>chr23.ForEachOptionTag</tag-class>
+    <body-content>JSP</body-content>
+
+    <attribute>
+      <name>options</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>selections</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>var</name>
+      <required>true</required>
+    </attribute>
+  </tag>
+
+  <tag>
+    <description>
+      Builds a checkbox element and adds it to the response.
+    </description>
+    <name>buildCheckbox</name>
+    <tag-class>chr23.BuildCheckboxTag</tag-class>
+    <body-content>empty</body-content>
+
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>selections</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
 </taglib>
