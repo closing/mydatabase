@@ -8,7 +8,7 @@
 
   <display-name>Example</display-name>
   <description>    The examples of Java Servlet Programming 2rd!  </description>
-  <!-- Chapter2 -->
+  <!-- Chapter2 START -->
   <servlet>
     <servlet-name>HelloWorld</servlet-name>
     <servlet-class>chr02.HelloWorld</servlet-class>
@@ -17,7 +17,16 @@
     <servlet-name>hello</servlet-name>
     <servlet-class>chr02.HelloServlet</servlet-class>
   </servlet>
-  <!-- Chapter 3-->
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/HelloWorld</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <!--Chapter2 END -->
+  <!--Chapter3 START -->
   <servlet>
     <servlet-name>simple</servlet-name>
     <servlet-class>chr03.SimpleCounterServlet</servlet-class>
@@ -59,16 +68,6 @@
     <servlet-name>guestbook</servlet-name>
     <servlet-class>chr03.GuestBookServlet</servlet-class>
   </servlet>
-    <!-- Chapter2 -->
-  <servlet-mapping>
-    <servlet-name>HelloWorld</servlet-name>
-    <url-pattern>/HelloWorld</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>hello</servlet-name>
-    <url-pattern>/hello</url-pattern>
-  </servlet-mapping>
-  <!--Chapter3-->
   <servlet-mapping>
     <servlet-name>simple</servlet-name>
     <url-pattern>/simple</url-pattern>
@@ -97,4 +96,119 @@
     <servlet-name>guestbook</servlet-name>
     <url-pattern>/guestbook</url-pattern>
   </servlet-mapping>
+  <!-- Chapter 3 END -->
+  <!-- Chapter 4 START -->
+  <context-param>
+    <param-name>rmihost</param-name>
+    <param-value>localhost</param-value>
+  </context-param>
+  <context-param>
+    <param-name>rmiport</param-name>
+    <param-value>1099</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>initsnoop</servlet-name>
+    <servlet-class>chr04.InitSnoopServlet</servlet-class>
+    <init-param>
+      <param-name>param1</param-name>
+      <param-value>value1</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>initsnoop</servlet-name>
+    <url-pattern>/initsnoop</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>serversnoop</servlet-name>
+    <servlet-class>chr04.ServerSnoopServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>serversnoop</servlet-name>
+    <url-pattern>/serversnoop</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>keyedserverlock</servlet-name>
+    <servlet-class>chr04.KeyedServerLockServlet</servlet-class>
+    <init-param>
+      <param-name>key</param-name>
+      <param-value>-9151314447111823249</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>keyedserverlock</servlet-name>
+    <url-pattern>/keyedserverlock</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>version</servlet-name>
+    <servlet-class>chr04.VersionSnoopServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>version</servlet-name>
+    <url-pattern>/version</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>restriction</servlet-name>
+    <servlet-class>chr04.ExportRestrictionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>restriction</servlet-name>
+    <url-pattern>/restriction</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>person</servlet-name>
+    <servlet-class>chr04.PersonalizedWelcomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>person</servlet-name>
+    <url-pattern>/person</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>param</servlet-name>
+    <servlet-class>chr04.ParameterSnoopServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>param</servlet-name>
+    <url-pattern>/param</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>keyedserverunlock</servlet-name>
+    <servlet-class>chr04.KeyedServerUnlockServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>keyedserverunlock</servlet-name>
+    <url-pattern>/keyedserverunlock</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>filelocation</servlet-name>
+    <servlet-class>chr04.FileLocationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>filelocation</servlet-name>
+    <url-pattern>/filelocation/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>viewfile</servlet-name>
+    <servlet-class>chr04.ViewFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewfile</servlet-name>
+    <url-pattern>/viewfile/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>unsafeviewresource</servlet-name>
+    <servlet-class>chr04.UnsafeViewResourceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>unsafeviewresource</servlet-name>
+    <url-pattern>/unsafeviewresource/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>viewresource</servlet-name>
+    <servlet-class>chr04.ViewResourceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewresource</servlet-name>
+    <url-pattern>/viewresource/*</url-pattern>
+  </servlet-mapping>
+  <!-- Chapter 4 END -->
 </web-app>

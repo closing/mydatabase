@@ -1,4 +1,3 @@
-// TODO Version 1.5 ?
 package common.servlet;
 
 public class VersionDetector {
