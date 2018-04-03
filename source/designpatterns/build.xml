@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<project name="designpattern" default="compile" basedir=".">
+  <property environment="env" />
+  <property name="app.home" value="." />
+  <property name="src.home" value="${app.home}/src" />
+  <property name="classes.home" value="${app.home}/bin" />
+  <target name="compile">
+    <javac srcdir="${src.home}" destdir="${classes.home}" debug="yes">
+    </javac>
+  </target>
+</project>
