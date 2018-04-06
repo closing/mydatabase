@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE wml PUBLIC
+  "-//WAPFORUM//DTD WML 1.1//EN"
+  "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+  <card id="AreaCode" title="Enter an Area Code">
+    <do type="accept" label="Enter">
+      <go href="areacode?code=$(code)"/>
+    </do>
+    <p>
+    Enter an Area Code: <input type="text" name="code"/>
+    </p>
+  </card>
+</wml>
