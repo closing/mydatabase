@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE wml PUBLIC
+  "-//WAPFORUM//DTD WML 1.1//EN"
+  "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+  <card id="Bartender" title="Select a Drink">
+    <p>
+    Select a Drink:
+    <anchor>
+      Kamikaze <go href="#Kamikaze" />
+    </anchor><br/>
+    <anchor>
+      Margarita <go href="#Margarita" />
+    </anchor><br/>
+    <anchor>
+      Boilermaker <go href="#Boilermaker" />
+    </anchor><br/>
+    </p>
+  </card>
+
+  <card id="Kamikaze" title="Kamikaze">
+    <p>
+    To make a Kamikaze:<br/>
+    1 part Vodka<br/>
+    1 part Triple Sec<br/>
+    1 part Lime Juice<br/>
+    </p>
+  </card>
+
+  <card id="Margarita" title="Margarita">
+    <p>
+    To make a Margarita:<br/>
+    1 1/2 oz Tequila<br/>
+    1/2 oz Triple Sec<br/>
+    1 oz Lime Juice<br/>
+    Salt<br/>
+    </p>
+  </card>
+
+  <card id="Boilermaker" title="Boilermaker">
+    <p>
+    To make a Boilermaker:<br/>
+    2 oz Whiskey<br/>
+    10 oz Beer<br/>
+    </p>
+  </card>
+</wml>
