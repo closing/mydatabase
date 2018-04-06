@@ -300,4 +300,39 @@
   </error-page>
   -->
   <!-- Chapter 5 END -->
+  <!-- Chapter 6 START -->
+  <servlet>
+    <servlet-name>areacode</servlet-name>
+    <servlet-class>chr06.AreaCodeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>areacode</servlet-name>
+    <url-pattern>/areacode</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>helloimage</servlet-name>
+    <servlet-class>chr06.HelloWorldGraphicsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>helloimage</servlet-name>
+    <url-pattern>/areacode</url-pattern>
+  </servlet-mapping>
+  <mime-mapping>
+    <extension>wml</extension>
+    <mime-type>text/vnd.wap.wml</mime-type>
+  </mime-mapping>
+  <mime-mapping>
+    <extension>wmls</extension>
+    <mime-type>text/vnd.wap.wmlscript</mime-type>
+  </mime-mapping>
+  <mime-mapping>
+    <extension>wbmp</extension>
+    <mime-type>image/vnd.wap.wbmp</mime-type>
+  </mime-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.wml</welcome-file>
+  </welcome-file-list>
+  <!-- Chapter 6 END -->
 </web-app>
