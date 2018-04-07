@@ -3,7 +3,9 @@ package designpatterns.client;
 
 import java.io.IOException;
 
+import designpatterns.prototype.OfficialDocument;
 import designpatterns.prototype.ProtoType;
+import designpatterns.prototype.PrototypeManager;
 import designpatterns.prototype.SerializableObject;
 
 public class PrototypeTest {
@@ -30,6 +32,25 @@ public class PrototypeTest {
 		System.out.println("--String of target: " + target.getStr());
 		System.out.println("--String of obj: " + target.getObj().toString());
 		System.out.println("----------------------------------------");
+
+		// OfficialDocumentManager
+		PrototypeManager pm = PrototypeManager.getPrototypeManager();
+		OfficialDocument doc1, doc2, doc3, doc4, doc5, doc6;
+		doc1 = pm.getOfficialDocument("far");
+		doc1.Display();
+		doc2 = pm.getOfficialDocument("far");
+		doc2.Display();
+		System.out.println(doc1 == doc2);
+		doc3 = pm.getOfficialDocument("srs");
+		doc3.Display();
+		doc4 = pm.getOfficialDocument("srs");
+		doc4.Display();
+		System.out.println(doc3 == doc4);
+		doc5 = pm.getOfficialDocument("ppr");
+		doc5.Display();
+		doc6 = pm.getOfficialDocument("ppr");
+		doc6.Display();
+		System.out.println(doc5 == doc6);
 	}
 
 }
