@@ -1,0 +1,48 @@
+package chr07;
+
+import java.io.PrintWriter;
+import java.io.IOException;
+import java.util.Enumeration;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class SessionTrackerServlet extends HttpServlet {
+
+  public void doGet(HttpServletRequest req, HttpServletResponse res)
+                               throws ServletException, IOException {
+    res.setContentType("text/html");
+    PrintWriter out = res.getWriter();
+
+    // Get the current session object, create one if necessary
+    HttpSession session = req.getSession();
+
+    // Increment the hit count for this page. The value is saved
+    // in this client's session under the name "tracker.count".
+    Integer count = (Integer)session.getAttribute("tracker.count");
+    if (count == null)
+      count = new Integer(1);
+    else
+      count = new Integer(count.intValue() + 1);
+    session.setAttribute("tracker.count", count);
+
+    out.println("<HTML><HEAD><TITLE>SessionTracker</TITLE></HEAD>");
+    out.println("<BODY><H1>Session Tracking Demo</H1>");
+
+    // Display the hit count for this page
+    out.println("You've visited this page " + count +
+      ((count.intValue() == 1) ? " time." : " times."));
+
+    out.println("<P>");
+
+    out.println("<H2>Here is your session data:</H2>");
+    Enumeration enums = session.getAttributeNames();
+    while (enums.hasMoreElements()) {
+      String name = (String) enums.nextElement();
+      out.println(name + ": " + session.getAttribute(name) + "<BR>");
+    }
+    out.println("</BODY></HTML>");
+  }
+}
