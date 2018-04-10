@@ -412,4 +412,89 @@
     <session-timeout>60</session-timeout>
   </session-config>
   <!-- Chapter 7 END -->
+  <!-- Chapter 8 START -->
+  <servlet>
+    <servlet-name>salary</servlet-name>
+    <servlet-class>chr08.SalaryServerServlet</servlet-class>
+    <!-- <security-role-ref>
+      <role-name>adm</role-name>
+      <role-link>admin</role-link>
+    </security-role-ref> -->
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>salary</servlet-name>
+    <url-pattern>/salary</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>authsnoop</servlet-name>
+    <servlet-class>chr08.AuthenticationSnoopServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>authsnoop</servlet-name>
+    <url-pattern>/authsnoop</url-pattern>
+  </servlet-mapping>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>SecretProtection</web-resource-name>
+      <url-pattern>/salary</url-pattern>
+      <url-pattern>/secret</url-pattern>
+      <url-pattern>/authsnoop</url-pattern>
+      <http-method>GET</http-method>
+      <http-method>POST</http-method>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+    <user-data-constraint>
+      <transport-guarantee>
+        CONFIDENTIAL <!-- INTEGRAL or CONFIDENTIAL -->
+      </transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+  <login-config>
+    <!-- <auth-method></auth-method> --> <!-- BASIC, DIGEST, FORM, CLIENT-CERT -->
+    <!-- <auth-method>FORM</auth-method> -->
+    <auth-method>CLIENT-CERT</auth-method> <!-- client must be recognized using X.509 cert -->
+    <!-- <realm-name>Default</realm-name> --> <!-- optional, only useful for BASIC -->
+    <form-login-config>
+      <form-login-page>/chr08/loginpage.html</form-login-page>
+      <form-error-page>/chr08/errorpage.html</form-error-page>
+    </form-login-config>
+  </login-config>
+  <security-role>
+    <role-name>admin</role-name>
+  </security-role>
+  <servlet>
+    <servlet-name>customauth</servlet-name>
+    <servlet-class>chr08.CustomAuthServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>customauth</servlet-name>
+    <url-pattern>/customauth</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>loginhandler</servlet-name>
+    <servlet-class>chr08.LoginHandlerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginhandler</servlet-name>
+    <url-pattern>/loginhandler</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>protected</servlet-name>
+    <servlet-class>chr08.ProtectedResourceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>protected</servlet-name>
+    <url-pattern>/protected</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>x509snoop</servlet-name>
+    <servlet-class>chr08.X509SnoopServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>x509snoop</servlet-name>
+    <url-pattern>/x509snoop</url-pattern>
+  </servlet-mapping>
+  <!-- Chapter 8 END -->
 </web-app>
