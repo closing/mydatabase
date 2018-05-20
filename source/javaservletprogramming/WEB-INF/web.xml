@@ -497,4 +497,30 @@
     <url-pattern>/x509snoop</url-pattern>
   </servlet-mapping>
   <!-- Chapter 8 END -->
+  <!-- Chapter 10 START -->
+  <servlet>
+    <servlet-name>daytime</servlet-name>
+    <servlet-class>chr10.DaytimeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>daytime</servlet-name>
+    <url-pattern>/daytime</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>chat</servlet-name>
+    <servlet-class>chr10.ChatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>chat</servlet-name>
+    <url-pattern>/chat</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>chatdispatch</servlet-name>
+    <servlet-class>chr10.ChatDispatch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>chatdispatch</servlet-name>
+    <url-pattern>/chatdispatch</url-pattern>
+  </servlet-mapping>
+  <!-- Chapter 10 END -->
 </web-app>
